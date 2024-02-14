@@ -31,10 +31,10 @@ function Footer() {
         <a href="https://rainbowit.net/themes/trydo/" title="Trydo" rel="home"> <img decoding="async" src="https://sp-ao.shortpixel.ai/client/to_webp,q_lossless,ret_img/http://rainbowit.net/themes/trydo/wp-content/themes/trydo/assets/images/logo/logo.png" alt="Trydo"/> </a>
         {/* <img width={300} src="https://sp-ao.shortpixel.ai/client/to_webp,q_lossless,ret_img/http://rainbowit.net/themes/trydo/wp-content/themes/trydo/assets/images/logo/logo.png" alt="Trydo"></img> */}
         </div>
-        <div className='flex justify-between  justify-items-center'>
+        <div className='flex justify-between gap-4  justify-items-center '>
           {
             icons.map((item) => {
-              return <div className='text-white p-3' key={item.id}>{item.icon}</div>
+              return <div className='text-white p-3 hover:scale-x-125' key={item.id}>{item.icon}</div>
             })
           }
         </div>

@@ -2,41 +2,91 @@ import React from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-
+import port1 from '../images/port1.jpg'
+import port2 from '../images/port2.jpg'
+import port3 from '../images/port3.jpg'
+import port4 from '../images/port4.jpg'
+import port5 from '../images/port5.jpg'
+import port6 from '../images/port6.jpg'
 function Portfolio() {
-  var settings = {
+  const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToShow: 3,
+    slidesToScroll: 1
   };
+
+  const img = [
+    {
+      id: 1,
+      image: port1,
+      name: "Jone Due",
+      post: "Web Developer"
+    },
+    {
+      id: 2,
+      image: port2,
+      name: "Jone Sena",
+      post: "Athlets"
+    },
+    {
+      id: 3,
+      image: port3,
+      name: "Imran Khan",
+      post: "Cricketer"
+    },
+    {
+      id: 4,
+      image: port4,
+      name: "Nawaz Shareef",
+      post: "Dafar"
+    },
+    {
+      id: 5,
+      image: port5,
+      name: "Zardari",
+      post: "Fradiya"
+    },
+    {
+      id: 6,
+      image: port6,
+      name: "Fazulo",
+      post: "Dissel"
+    },
+
+  ]
+
   return (
 
     <div className="section-title mb--20 mb_sm--0 text-left">
-      <h2 className="text-[80px] font-bold"><span>Our Portfolio</span></h2>
+      <h2 className="text-[60px] font-bold"><span>Our Portfolio</span></h2>
       <p className="text-[20px] text-gray-500" >There are many variations of passages of Lorem Ipsum available,
         <br /> but the majority have suffered alteration.</p>
-      <div className='mt-5'>
+      <div className="slider-container mt-5 px-6">
         <Slider {...settings}>
-          <div>
-          <h3>1</h3>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
+          
+        {
+            img.map((item) => {
+              return (
+                <div className='px-5 relative hover:scale-110 ease-in-out duration-300 delay-75' key={item.id}>
+                    <div className='relative '>
+                      <img src={item.image} />
+                      <div className='absolute px-5   h-full w-full z-10 hover:bg-red-700 opacity-50 top-0 left-0 '>
+                      <div className='absolute bottom-5 left-5 text-white z-30'>
+                      <h3>{item.name}</h3>
+                      <p>{item.post}</p>
+                    </div>
+                      </div>
+                     
+                    </div>
+                    
+                 
+                </div>
+              )
+            })
+          }
+
         </Slider>
       </div>
 

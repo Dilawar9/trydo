@@ -9,7 +9,6 @@ import Facts from './component/facts/Facts'
 import Clients from './component/clients/Clients'
 import News from './component/news/News'
 import OurTeam from './component/ourteam/OurTeam'
-import testimonials from './component/testimonials/Testimonials'
 import Testimonials from './component/testimonials/Testimonials'
 
 function App() {
@@ -20,7 +19,7 @@ function App() {
       <section id='home' className='bg-black'>
         <div className='container mx-auto max-w-[1340px]'>
           <Navebar />
-          <Hero />
+          <Hero/>
         </div>
       </section>
 

@@ -6,7 +6,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { useEffect,useState } from 'react';
 
 const Navebar = () => {
-  const [theme, setTheme] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = useState(null);
   const [open, setOpen] = useState(false);
 
   const NavItems = [
@@ -60,22 +60,25 @@ const Navebar = () => {
   };
 
   useEffect(() => {
-
-    if (theme == false) {
-      document.documentElement.classList.remove('dark');
-    } else {
+    let isDark = localStorage.getItem("isDark");
+    if (isDark == 'true') {
       document.documentElement.classList.add('dark');
+      setIsDarkTheme("true");
     }
-
-    // save in local storage
-    localStorage.setItem("darkMode", theme);
-
-  }, [theme]);
+  }, [])
 
   const toggleDarkMode = () => {
-    setTheme((theme) => !theme);
+    let isDark = localStorage.getItem("isDark");
+    if (isDark == null || isDark == 'false') {
+      localStorage.setItem('isDark', true);
+      document.documentElement.classList.add('dark');
+      setIsDarkTheme("true");
+    } else {
+      localStorage.setItem('isDark', false);
+      document.documentElement.classList.remove('dark');
+      setIsDarkTheme(null);
+    }
   };
-
   return (
     <>
      <Button type="primary" onClick={showDrawer} className='text-2xl mt-2 md:hidden'>
@@ -98,7 +101,7 @@ const Navebar = () => {
         onClick={toggleDarkMode}
         className="px-4 py-2 rounded-md bg-gray-800 text-white"
       >
-        {(theme == false) ? <FaMoon /> : <BsSunFill />}
+       {(isDarkTheme == "false" || isDarkTheme == null) ? <FaMoon /> : <BsSunFill />}
       </button>
 
       <Drawer title="Navbar" onClose={onClose} open={open} placement='left' >
