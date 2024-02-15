@@ -9,64 +9,71 @@ function OurTeam() {
 
   const team = [
     {
-      id:1,
-      icon:team1,
+      id: 1,
+      icon: team1,
       name: "Jone Due",
-      post:"Web Developer"
+      post: "Web Developer"
     },
     {
-      id:2,
-      icon:team2,
+      id: 2,
+      icon: team2,
       name: "Jone Due",
-      post:"Web Developer"
+      post: "Web Developer"
     },
     {
-      id:3,
-      icon:team3,
+      id: 3,
+      icon: team3,
       name: "Jone Due",
-      post:"Web Developer"
+      post: "Web Developer"
     },
     {
-      id:4,
-      icon:team4,
+      id: 4,
+      icon: team4,
       name: "Jone Due",
-      post:"Web Developer"
+      post: "Web Developer"
     },
     {
-      id:5,
-      icon:team5,
+      id: 5,
+      icon: team5,
       name: "Jone Due",
-      post:"Web Developer"
+      post: "Web Developer"
     },
     {
-      id:6,
-      icon:team6,
+      id: 6,
+      icon: team6,
       name: "Jone Due",
-      post:"Web Developer"
+      post: "Web Developer"
     },
-   
+
   ]
   return (
-   <>
-    <h2 className="text-[60px] font-bold"><span>Skilled Team</span></h2>
+    <>
+      <h2 className="text-[60px] font-bold"><span>Skilled Team</span></h2>
       <p className="text-[20px] text-gray-500" >There are many variations of passages of Lorem Ipsum available,
-      <br /> but the majority have suffered alteration.</p>
+        <br /> but the majority have suffered alteration.</p>
 
-      <div  className='grid grid-cols-1 px-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
+      <div className='grid grid-cols-1 px-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
       {
-        team.map( item => {
-            return <div key={item.id}  className='p-10 rounded mt-6 border bg-gray-400   dark:bg-gray-700 '>
-              <div className=' hover:scale-125'>
-                <img src={item.icon}/>
-              </div>
-              <p className='text-[60px] mb-4'></p>
-              <h3 className='text-2xl mb-4 font-bold'>{item.name}</h3>
-              <p className='text-xl text-gray-500 dark:text-white'>{item.post}</p>
-            </div>
-        })
-      }
-    </div>
-   </>
+            team.map((item) => {
+              return (
+                <div className='px-5 relative  ease-in-out duration-300 delay-75' key={item.id}>
+                  <div className='relative mt-5'>
+                    <img src={item.icon} className='rounded-lg' />
+                    <div className='absolute px-5   h-full w-full z-10 hover:bg-red-700 rounded-lg opacity-50 top-0 left-0 '>
+                      <div className='absolute bottom-5 left-5 text-white z-30'>
+                        <h3>{item.name}</h3>
+                        <p>{item.post}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )
+            })
+          }
+
+      </div>
+       
+    </>
   )
 }
 

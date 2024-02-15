@@ -99,7 +99,7 @@ const Navebar = () => {
       </div>
       <button
         onClick={toggleDarkMode}
-        className="px-4 py-2 rounded-md bg-gray-800 text-white"
+        className="px-4 py-2 rounded-md bg-gray-800 text-white fixed bottom-20"
       >
        {(isDarkTheme == "false" || isDarkTheme == null) ? <FaMoon /> : <BsSunFill />}
       </button>

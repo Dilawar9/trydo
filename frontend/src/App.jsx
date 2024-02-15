@@ -10,6 +10,7 @@ import Clients from './component/clients/Clients'
 import News from './component/news/News'
 import OurTeam from './component/ourteam/OurTeam'
 import Testimonials from './component/testimonials/Testimonials'
+import ScrollToTop from "react-scroll-to-top";
 
 function App() {
 
@@ -47,19 +48,19 @@ function App() {
       </section>
 
       <section id='testimonials' className='py-10 dark:bg-gray-800 dark:text-white'>
-        <div className='container mx-auto max-w-[1340px]'>
+        <div className='container max-w-[1340px]  '>
           <Testimonials/>
         </div>
       </section>
 
-      <section id='news' className='py-10 dark:bg-gray-800 dark:text-white'>
+      <section id='news' className='py-10  bg-gray-100 dark:bg-gray-800 dark:text-white'>
         <div className='container mx-auto max-w-[1340px]'>
           <News />
         </div>
       </section>
 
-      <section id='clients' className='py-10 dark:bg-gray-800 dark:text-white'>
-        <div className='container mx-auto max-w-[1340px]'>
+      <section id='clients' className='py-10 dark:bg-[#191919]'>
+        <div className='container mx-auto client'>
           <Clients />
         </div>
       </section>
@@ -67,6 +68,7 @@ function App() {
       <section id='footer' className='bg-black'>
         <div className='container mx-auto max-w-[1340px]'>
        <Footer/>
+         <ScrollToTop smooth />
         </div>
       </section>
     </>

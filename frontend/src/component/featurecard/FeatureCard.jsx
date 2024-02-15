@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FaRegCircleUser } from "react-icons/fa6";
 import { TbBusinessplan } from "react-icons/tb";
 import { SlLayers } from "react-icons/sl";
@@ -8,7 +8,9 @@ import { TbBrandWebflow } from "react-icons/tb";
 
 
 
+
 const FeatureCard = () => {
+
 
   const cards = [
     {
@@ -53,7 +55,9 @@ const FeatureCard = () => {
     <div  className='grid grid-cols-1 px-3 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
       {
         cards.map( item => {
-            return <div key={item.id}  className='p-10 rounded-xl group dark:bg-gray-700  boxHoverGradient hover:text-white  hover:cursor-pointer bg-gray-100'>
+            return <div key={item.id}   className='p-10 rounded-xl group dark:bg-gray-700  boxHoverGradient hover:text-white  hover:cursor-pointer bg-gray-100' data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine" >
               <p className='text-[60px] mb-4'>{item.icon}</p>
               <h3 className='text-2xl mb-4 font-bold'>{item.heading}</h3>
               <p  className='text-xl text-gray-500 dark:text-white  group-hover:text-white '>{item.content}</p>

@@ -11,3 +11,13 @@
 .boxHoverGradient:hover {
     background-image: linear-gradient(145deg,#f81f01,#ee076e);
 }
+
+html {
+    scroll-behavior: smooth;
+  }
+
+.client{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }

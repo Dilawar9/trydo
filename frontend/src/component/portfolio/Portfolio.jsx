@@ -14,7 +14,9 @@ function Portfolio() {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000
   };
 
   const img = [
@@ -65,23 +67,19 @@ function Portfolio() {
         <br /> but the majority have suffered alteration.</p>
       <div className="slider-container mt-5 px-6">
         <Slider {...settings}>
-          
-        {
+          {
             img.map((item) => {
               return (
-                <div className='px-5 relative hover:scale-110 ease-in-out duration-300 delay-75' key={item.id}>
-                    <div className='relative '>
-                      <img src={item.image} />
-                      <div className='absolute px-5   h-full w-full z-10 hover:bg-red-700 opacity-50 top-0 left-0 '>
+                <div className='px-6 relative hover:scale-110 ease-in-out duration-300 delay-75 my-8' key={item.id}>
+                  <div className='relative '>
+                    <img src={item.image} className='rounded-lg' />
+                    <div className='absolute px-5   h-full w-full z-10 hover:bg-red-700 rounded-lg   opacity-50 top-0 left-0 '>
                       <div className='absolute bottom-5 left-5 text-white z-30'>
-                      <h3>{item.name}</h3>
-                      <p>{item.post}</p>
-                    </div>
+                        <h3>{item.name}</h3>
+                        <p>{item.post}</p>
                       </div>
-                     
                     </div>
-                    
-                 
+                  </div>
                 </div>
               )
             })
