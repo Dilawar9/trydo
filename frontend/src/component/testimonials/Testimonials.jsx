@@ -50,15 +50,13 @@ function Testimonials() {
       <p className="text-[40px] text-center mt-5" >Phenomenal Customer Service! I'm just starting out with,
         <br /> the team helped me so much with integrating this int<br />my website. Highly recommend.</p>
       <h6 className='text-red-600 text-[20px] text-center mt-5'>FATIMA ASRAFY <span>- COO, AMERIMAR ENTERPRISES, INC.</span></h6>
-      <div className='w-[700px] grid grid-cols-1 px-1 sm:grid-cols-2 lg:grid-cols-5 gap-1 mx-auto'>
+      <div className='md:w-[700px]  grid grid-cols-3 px-1 sm:grid-cols-2  lg:grid-cols-5 gap-1 mx-auto'>
 
         {
           test.map(item => {
-            return <div key={item.id} className='p-10 mt-1 bg-white-100  dark:bg-gray-700  '>
-              <div className='hover:scale-110 ease-in-out duration-200 delay-75 opacity-70  '>
-                <img src={item.image} />
-              </div>
-            </div>
+            return <img src={item.image} className='hover:scale-110 ease-in-out duration-200 delay-75 opacity-70  '/>
+              
+           
           })
         }
       </div>

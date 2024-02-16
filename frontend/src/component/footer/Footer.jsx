@@ -26,13 +26,13 @@ const icons = [
 
 function Footer() {
   return (
-    <div className='flex justify-between justify-items-center items-center'>
-      <div className='text-white p-5'>
+    <div className='grid grid-cols-1 md:grid-cols-3 py-10'>
+      
         <a href="https://rainbowit.net/themes/trydo/" title="Trydo" rel="home">
-          <img decoding="async" src="https://sp-ao.shortpixel.ai/client/to_webp,q_lossless,ret_img/http://rainbowit.net/themes/trydo/wp-content/themes/trydo/assets/images/logo/logo.png" alt="Trydo" />
+          <img decoding="async" width={150} src="https://sp-ao.shortpixel.ai/client/to_webp,q_lossless,ret_img/http://rainbowit.net/themes/trydo/wp-content/themes/trydo/assets/images/logo/logo.png" alt="Trydo" />
         </a>
-      </div>
-      <div className='flex justify-between gap-4  justify-items-center '>
+      
+      <div className='grid grid-cols-4  place-items-center gap-4' >
         {
           icons.map((item) => {
             return <div className='text-white p-5 border rounded-full hover:bg-red-700 hover:scale-110' key={item.id}>{item.icon}</div>
