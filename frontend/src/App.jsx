@@ -31,7 +31,7 @@ function App() {
       </section>
       <section id='portfolio' className='py-10 dark:bg-gray-800 dark:text-white bg-gray-100'>
         <div className='container mx-auto max-w-[1340px]'>
-          {/* <Portfolio /> */}
+          <Portfolio />
         </div>
       </section>
 
@@ -55,7 +55,7 @@ function App() {
 
       <section id='news' className='py-10  bg-gray-100 dark:bg-gray-800 dark:text-white'>
         <div className='container mx-auto max-w-[1340px]'>
-          {/* <News /> */}
+          <News />
         </div>
       </section>
 
